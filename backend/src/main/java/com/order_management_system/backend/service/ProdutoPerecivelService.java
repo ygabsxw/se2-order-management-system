@@ -32,7 +32,7 @@ public class ProdutoPerecivelService {
     }
 
     public ProdutoPerecivel salvar(ProdutoPerecivel produto) {
-        if (produto.getData_validade().isBefore(LocalDate.now())) {
+        if (produto.getDataValidade().isBefore(LocalDate.now())) {
             throw new RuntimeException("Não é possível cadastrar um produto já vencido!");
         }
         return repository.save(produto);

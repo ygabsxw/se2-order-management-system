@@ -54,7 +54,7 @@ public ResponseEntity<ProdutoPerecivel> atualizar(@PathVariable Integer id, @Req
         produtoExistente.setPreco(dadosNovos.getPreco());
         
     
-        produtoExistente.setData_validade(dadosNovos.getData_validade());
+        produtoExistente.setDataValidade(dadosNovos.getDataValidade());
         
         ProdutoPerecivel atualizado = service.salvar(produtoExistente);
         return ResponseEntity.ok(atualizado);
